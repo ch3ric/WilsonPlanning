@@ -1,7 +1,5 @@
 # Learn more about services, parameters and containers at
 # http://symfony.com/doc/current/service_container.html
-parameters:
-    #parameter_name: value
 
 services:
     # default configuration for services in *this* file
@@ -29,7 +27,20 @@ services:
         public: true
         tags: ['controller.service_arguments']
 
-    # add more services, or override services that need manual wiring
-    # AppBundle\Service\ExampleService:
-    #     arguments:
-    #         $someArgument: 'some_value'
+    AppBundle\Action\Webhook\SlackAction:
+        public: true
+        arguments:
+            $slackWebhookToken: '%slack.webhook_token%'
+
+    GuzzleHttp\Client: ~
+    GuzzleHttp\ClientInterface: '@GuzzleHttp\Client'
+
+    AppBundle\Slack\Client:
+        arguments:
+            $baseUri: '%slack.base_uri%'
+            $token: '%slack.api_token%'
+
+    AppBundle\DialogFlow\Client:
+        arguments:
+            $baseUri: '%google.dialogflow.base_uri%'
+            $token: '%google.dialogflow.api_token%'

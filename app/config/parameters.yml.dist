@@ -21,3 +21,10 @@ parameters:
     cors_allow_origin: http://localhost
 
     varnish_urls: [http://varnish]
+
+    slack.webhook_token: "'Verification Token' from 'Basic Information' > 'App credentials' on https://api.slack.com/apps"
+    slack.base_uri: 'https://slack.com/api/'
+    slack.api_token: "'OAuth Access Token' from 'OAuth & Permissions' > 'Tokens for Your Workspace' on https://api.slack.com/apps"
+
+    google.dialogflow.base_uri: 'https://api.dialogflow.com/v1/'
+    google.dialogflow.api_token: "'Client access token' from agent settings > 'General' tab > 'API KEYS (V1)' on https://console.dialogflow.com"

@@ -2,7 +2,7 @@ Wilson Planning
 ===============
 
 This is a PoC to show how to build a Slack bot with Symfony and Dialogflow.
-See [blog post in French](https://blog.eleven-labs.com/fr/2017-12-21-remplacer-erp-par-slack-bot-avec-dialogflow-et-symfony) for more details.
+See [blog post in French](https://blog.eleven-labs.com/fr/remplacer-erp-par-slack-bot-avec-dialogflow-et-symfony/) for more details.
 
 
 Based on API Platform
